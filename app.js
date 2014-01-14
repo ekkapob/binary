@@ -4,12 +4,13 @@
  */
 
 var express = require('express');
-var routes = require('./routes');
-var user = require('./routes/user');
 var http = require('http');
 var path = require('path');
-
 var app = express();
+
+var routes = require('./routes');
+var user = require('./routes/user');
+var item = require('./routes/item');
 
 // all environments
 app.set('port', process.env.PORT || 3000);
@@ -33,13 +34,8 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-//app.get('/', routes.index);
-app.get('/', function(req, res){
-	res.locals = {
-		title: 'This is a title'
-	};
-	res.render('index');
-});
+app.get('/', routes.index);
+app.get('/items', item.list);
 app.get('/users', user.list);
 
 http.createServer(app).listen(app.get('port'), function(){
