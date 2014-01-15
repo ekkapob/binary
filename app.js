@@ -16,7 +16,7 @@ var login = require('./routes/login');
 // all environments
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
-app.set('layout', 'layout');
+app.set('layout', 'layouts/default');
 app.set('partials', { 
   header: 'shared/header',
   flash: 'shared/flash',
@@ -43,15 +43,7 @@ if ('development' == app.get('env')) {
 
 app.get('/', routes.index);
 app.get('/login', login.page);
-app.post('/login', function(req, res, next) {
-	if (req.body.username == 'foo' && req.body.password == 'bar') {
-		req.flash('info', 'Login success!!!');
-	} else {
-		req.flash('info', 'Failed to login!!!');
-	}
-	res.redirect('/')
-});
-
+app.post('/login', login.authenticate);
 app.get('/items', item.list);
 app.get('/users', user.list);
 
