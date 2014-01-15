@@ -17,6 +17,10 @@ var login = require('./routes/login');
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
 app.set('layout', 'layout');
+app.set('partials', { 
+  header: 'shared/header',
+  footer: 'shared/footer'
+});
 app.set('view engine', 'html');
 app.engine('html', require('hogan-express'));
 
@@ -37,7 +41,6 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', routes.index);
-
 app.get('/login', login.page);
 app.post('/login', function(req, res, next) {
 	if (req.body.username == 'foo' && req.body.password == 'bar') {

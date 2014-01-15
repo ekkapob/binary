@@ -6,9 +6,11 @@
 	<title>BINARY Outfits{{#title}} | {{title}}{{/title}}</title>
 </head>
 <body>
+  {{>header}}
 	{{#message}}
 		<div style="background-color:#F00">{{message}}</div>
 	{{/message}}
 	{{{ yield }}}
+  {{>footer}}
 </body>
 </html>
