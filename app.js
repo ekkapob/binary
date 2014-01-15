@@ -19,6 +19,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('layout', 'layout');
 app.set('partials', { 
   header: 'shared/header',
+  flash: 'shared/flash',
   footer: 'shared/footer'
 });
 app.set('view engine', 'html');
