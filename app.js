@@ -35,6 +35,7 @@ app.use(express.session());
 app.use(flash());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'bower_components')));
 
 // development only
 if ('development' == app.get('env')) {
