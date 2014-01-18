@@ -51,7 +51,7 @@ app.get('/products', product.index);
 app.get('/products/new', product.new);
 app.get('/products/:id', product.show);
 // app.get('/products/:id/edit', product.edit);
-// app.post('/products', product.create)
+app.post('/products', product.create)
 // app.put('/products/:id', product.update);
 // app.delete('/products/:id', product.destroy);
 

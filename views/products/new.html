@@ -1,1 +1,9 @@
-Form to add a new product
+<form action="/products" method="post" autocomplete="off" enctype="multipart/form-data">
+	<label for="productName">Product name:</label>
+	<input id="productName" name="name" type="text" placeholder="product name"><br>
+	<label for="productDesc">Description:</label>
+	<textarea id="productDesc" name="desc"></textarea><br>
+	<label for="productPrice">Price:</label>
+	<input id="productPrice" name="price" type="text" placeholder="product price"><br>
+	<button type="submit">Submit</button>
+</form>
