@@ -6,6 +6,7 @@ exports.page = function(req, res) {
 
 exports.authenticate = function(req, res) {
   if (req.body.username == 'foo' && req.body.password == 'bar') {
+		req.session.authenticated = true;  	
     req.flash('info', 'Login success!!!');
   } else {
     req.flash('info', 'Failed to login!!!');

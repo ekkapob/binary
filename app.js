@@ -10,7 +10,7 @@ var app = express();
 
 var routes = require('./routes');
 var user = require('./routes/user');
-var item = require('./routes/item');
+var product = require('./routes/product');
 var login = require('./routes/login');
 
 // all environments
@@ -34,8 +34,8 @@ app.use(express.cookieParser('awesomeseckret'));
 app.use(express.session());
 app.use(flash());
 app.use(app.router);
-app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.static(path.join(__dirname, 'bower_components')));
+app.use('/public', express.static(path.join(__dirname, 'public')));
+app.use('/public', express.static(path.join(__dirname, 'bower_components')));
 
 // development only
 if ('development' == app.get('env')) {
@@ -45,7 +45,16 @@ if ('development' == app.get('env')) {
 app.get('/', routes.index);
 app.get('/login', login.page);
 app.post('/login', login.authenticate);
-app.get('/items', item.list);
+
+//REST routes
+app.get('/products', product.index);
+app.get('/products/new', product.new);
+app.get('/products/:id', product.show);
+// app.get('/products/:id/edit', product.edit);
+// app.post('/products', product.create)
+// app.put('/products/:id', product.update);
+// app.delete('/products/:id', product.destroy);
+
 app.get('/users', user.list);
 
 http.createServer(app).listen(app.get('port'), function() {
