@@ -17,10 +17,10 @@ var login = require('./routes/login');
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
 app.set('layout', 'layouts/default');
-app.set('partials', { 
-  header: 'shared/header',
-  flash: 'shared/flash',
-  footer: 'shared/footer'
+app.set('partials', {
+	header: 'shared/header',
+	flash: 'shared/flash',
+	footer: 'shared/footer'
 });
 app.set('view engine', 'html');
 app.engine('html', require('hogan-express'));
@@ -34,8 +34,10 @@ app.use(express.cookieParser('awesomeseckret'));
 app.use(express.session());
 app.use(flash());
 app.use(app.router);
+
 app.use('/public', express.static(path.join(__dirname, 'public')));
 app.use('/public', express.static(path.join(__dirname, 'bower_components')));
+app.set('images', path.join(__dirname, 'public/upload/images'));
 
 // development only
 if ('development' == app.get('env')) {
@@ -51,7 +53,7 @@ app.get('/products', product.index);
 app.get('/products/new', product.new);
 app.get('/products/:id', product.show);
 // app.get('/products/:id/edit', product.edit);
-app.post('/products', product.create)
+app.post('/products', product.create(app.get('images')));
 // app.put('/products/:id', product.update);
 // app.delete('/products/:id', product.destroy);
 
