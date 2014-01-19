@@ -1,3 +1,6 @@
-{{#flash}}
-  <i>{{message}}</i>
-{{/flash}}
+{{#flash.message}}
+<div class="alert alert-success">{{flash.message}}</div>
+{{/flash.message}}
+{{#flash.warning}}
+<div class="alert alert-warning">{{flash.warning}}</div>
+{{/flash.warning}}

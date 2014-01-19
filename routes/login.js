@@ -9,7 +9,7 @@ exports.authenticate = function(req, res) {
 		req.session.authenticated = true;  	
     req.flash('info', 'Login success!!!');
   } else {
-    req.flash('info', 'Failed to login!!!');
+    req.flash('warning', 'Failed to login!!!');
   }
   res.redirect('/')
 }
