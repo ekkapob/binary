@@ -1,5 +1,5 @@
 {
-  "name": "application-name",
+  "name": "binary-outfits",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -10,5 +10,25 @@
     "hogan-express": "~0.5.2",
     "connect-flash": "~0.1.1",
     "busboy": "0.0.14"
-  }
+  },
+  "description": "Binary Outfits",
+  "main": "app.js",
+  "directories": {
+    "test": "tests"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ekkapob/binary.git"
+  },
+  "keywords": [
+    "binary",
+    "outfits"
+  ],
+  "author": "ek",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ekkapob/binary/issues"
+  },
+  "homepage": "https://github.com/ekkapob/binary"
 }
