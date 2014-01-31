@@ -35,7 +35,7 @@ app.use(express.session());
 app.use(flash());
 app.use(app.router);
 
-app.use('/stylesheets', express.static(path.join(__dirname, 'public')));
+app.use('/stylesheets', express.static(path.join(__dirname, 'public/stylesheets')));
 app.use('/bootstrap', express.static(path.join(__dirname, 'bower_components/bootstrap')));
 app.set('images', path.join(__dirname, 'public/upload/images'));
 
