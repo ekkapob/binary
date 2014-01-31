@@ -1,7 +1,14 @@
-$font-stack:    Helvetica, sans-serif;
-$primary-color: #333;
+@import 'webfonts';
+
+$page-color: #F8F8F8;
+$grand-font: 'grand_hotelregular';
 
 body {
-  font: 100% $font-stack;
-  color: $primary-color;
+  background-color: $page-color;
+  padding-top: 9px;
+}
+
+#logo {
+  font-family: $grand-font;
+  font-size: 65px;
 }

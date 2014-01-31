@@ -1,3 +1,14 @@
+@font-face {
+  font-family: 'grand_hotelregular';
+  src: url('fonts/grandhotel-regular-webfont.eot');
+  src: url('fonts/grandhotel-regular-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/grandhotel-regular-webfont.woff') format('woff'), url('fonts/grandhotel-regular-webfont.ttf') format('truetype'), url('fonts/grandhotel-regular-webfont.svg#grand_hotelregular') format('svg');
+  font-weight: normal;
+  font-style: normal; }
+
 body {
-  font: 100% Helvetica, sans-serif;
-  color: #333; }
+  background-color: #F8F8F8;
+  padding-top: 9px; }
+
+#logo {
+  font-family: 'grand_hotelregular';
+  font-size: 65px; }
