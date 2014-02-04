@@ -1,10 +1,14 @@
 @import 'webfonts';
 
-$page-color: #F8F8F8;
 $grand-font: 'grand_hotelregular';
+$thai-font: 'thaisansneue';
 
+$page-color: #F8F8F8;
 $grey: #EEE;
 $dark-gray: #EBEBEB;
+$black: #333333;
+$green: #19bd9b;
+$dark-green: #188e78;
 
 body {
   background-color: $page-color;
@@ -14,9 +18,33 @@ body {
 #logo {
   font-family: $grand-font;
   font-size: 65px;
+  color: $black;
 }
 
 nav{
+  .nav {
+    position: absolute;
+    text-align: center;
+    display: table;
+    width: 100%;
+    margin-top: -5px;
+    > li {
+      display: table-cell;
+      > a {
+        font-family: 'thaisansneue';
+        font-size: 30px;
+        padding: 0;
+        margin: 0 10px;
+        color: $black;
+      }
+      > a:hover {
+        background-color: $green;
+        color: $page-color;
+        border-bottom: 3px solid #188E78;
+      }   
+    }
+  }
+
   .top-border {
     border-top: 1px solid $grey;
     margin-top: 22px;
@@ -24,6 +52,19 @@ nav{
   }
   .bottom-border {
     border-top: 1px solid $grey;
-    box-shadow: 0px 1px 2px $dark-gray; 
+    box-shadow: 0px 1px 2px $dark-gray;
+    top: 38px;
   }
+}
+
+#slide {
+  background: url('../images/slide1.jpg');
+  margin-top: 75px;
+  width: 1170px;
+  height: 625px;
+  margin-bottom: 40px;
+}
+
+.hr {
+  border-top: 2px solid #EBEBEB;
 }
