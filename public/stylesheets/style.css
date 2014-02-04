@@ -26,7 +26,7 @@ nav .nav {
   text-align: center;
   display: table;
   width: 100%;
-  margin-top: -5px; }
+  margin-top: -2px; }
   nav .nav > li {
     display: table-cell; }
     nav .nav > li > a {
@@ -56,4 +56,16 @@ nav .bottom-border {
   margin-bottom: 40px; }
 
 .hr {
-  border-top: 2px solid #EBEBEB; }
+  border-top: 1px solid #DFDFDF; }
+
+.separator {
+  background: #B6B6B6;
+  font-size: 14px;
+  width: 25px !important;
+  border-radius: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  top: -12px;
+  color: #333;
+  text-shadow: 0px 1px 1px #CACACA;
+  border: 1px solid #B3B3B3; }
