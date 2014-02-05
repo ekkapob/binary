@@ -2,6 +2,7 @@
 
 $grand-font: 'grand_hotelregular';
 $thai-font: 'thaisansneue';
+$claire-font: 'claire_handregular';
 
 $page-color: #F8F8F8;
 $grey: #EEE;
@@ -12,13 +13,13 @@ $dark-green: #188e78;
 
 body {
   background-color: $page-color;
+  color: $black;
   padding-top: 9px;
 }
 
 #logo {
   font-family: $grand-font;
   font-size: 65px;
-  color: $black;
 }
 
 nav{
@@ -53,7 +54,7 @@ nav{
   .bottom-border {
     border-top: 1px solid $grey;
     box-shadow: 0px 1px 2px $dark-gray;
-    top: 38px;
+    top: 40px;
   }
 }
 
@@ -71,13 +72,27 @@ nav{
 
 .separator {
   background: #B6B6B6;
-  font-size: 14px;
+  font-size: 13px;
   width: 25px !important;
   border-radius: 20px;
-  padding-top: 5px;
   padding-bottom: 5px;
   top: -12px;
   color: #333;
   text-shadow: 0px 1px 1px #CACACA;
   border: 1px solid #B3B3B3;
+  padding-top: 5px;
+}
+
+.content {
+  h1 {
+    font-family: $grand-font;
+    font-size: 4em;
+    text-align: center;  
+  }
+  h2 {
+    font-family: $claire-font;
+    color: $green;
+    text-align: center;
+    font-size: 2em;
+  }
 }
