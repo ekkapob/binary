@@ -68,7 +68,7 @@ nav .bottom-border {
 .separator {
   background: #B6B6B6;
   font-size: 13px;
-  width: 25px !important;
+  width: 24px !important;
   border-radius: 20px;
   padding-bottom: 5px;
   top: -12px;
@@ -79,10 +79,9 @@ nav .bottom-border {
 
 .content h1 {
   font-family: 'grand_hotelregular';
-  font-size: 4em;
+  font-size: 60px;
   text-align: center; }
 .content h2 {
   font-family: 'claire_handregular';
   color: #19bd9b;
-  text-align: center;
-  font-size: 2em; }
+  text-align: center; }
