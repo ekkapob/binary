@@ -95,3 +95,28 @@ nav{
     text-align: center;
   }
 }
+
+h3 {
+  text-align: center;
+  font-family: $thai-font;
+  font-size: 48px;
+}
+
+.new-product {
+  text-align: center;
+  .new-product-text {
+    display: inline-block;
+    margin: 0;
+    top: -30px;
+    position: relative;
+    margin-left: 10px;
+  }
+}
+
+.yellow-star {
+  background-image: url('../images/yellow_star.png');
+  width: 80px;
+  height: 87px;
+  display: inline-block;
+}
+
