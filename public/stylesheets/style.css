@@ -91,17 +91,52 @@ h3 {
   font-family: 'thaisansneue';
   font-size: 48px; }
 
-.new-product {
+.new-pd {
   text-align: center; }
-  .new-product .new-product-text {
+  .new-pd .new-pd-text {
     display: inline-block;
     margin: 0;
     top: -30px;
     position: relative;
     margin-left: 10px; }
 
+.new-pd-item .new-pd-content {
+  margin-top: 140px;
+  border: 1px solid #FDFDFD;
+  box-shadow: 2px 2px 0px #EEE;
+  background-color: #FDFDFD;
+  padding: 15px;
+  min-height: 350px; }
+  .new-pd-item .new-pd-content img {
+    margin-top: -140px;
+    margin-left: auto;
+    margin-right: auto; }
+  .new-pd-item .new-pd-content h4 {
+    font-family: 'claire_handregular';
+    color: #8C73F1;
+    font-size: 22px;
+    text-align: center; }
+.new-pd-item .more-details {
+  text-align: center;
+  margin-top: -20px; }
+  .new-pd-item .more-details button {
+    border: 0;
+    background-color: #19bd9b;
+    color: #F8F8F8;
+    font-family: 'thaisansneue';
+    font-size: 25px;
+    margin: 0;
+    padding: 0 10px;
+    border-bottom: 3px solid #188e78; }
+    .new-pd-item .more-details button:hover {
+      background-color: #1EAC92; }
+
 .yellow-star {
   background-image: url('../images/yellow_star.png');
   width: 80px;
   height: 87px;
   display: inline-block; }
+
+@media (min-width: 992px) {
+  .new-pd-item .new-pd-content {
+    min-height: 300px; } }

@@ -6,10 +6,12 @@ $claire-font: 'claire_handregular';
 
 $page-color: #F8F8F8;
 $grey: #EEE;
-$dark-gray: #EBEBEB;
+$dark-grey: #EBEBEB;
 $black: #333333;
 $green: #19bd9b;
 $dark-green: #188e78;
+$purple: #8C73F1;
+$white: #FDFDFD;
 
 body {
   background-color: $page-color;
@@ -49,11 +51,11 @@ nav{
   .top-border {
     border-top: 1px solid $grey;
     margin-top: 22px;
-    box-shadow: 0px -1px 2px $dark-gray;
+    box-shadow: 0px -1px 2px $dark-grey;
   }
   .bottom-border {
     border-top: 1px solid $grey;
-    box-shadow: 0px 1px 2px $dark-gray;
+    box-shadow: 0px 1px 2px $dark-grey;
     top: 40px;
   }
 }
@@ -102,9 +104,9 @@ h3 {
   font-size: 48px;
 }
 
-.new-product {
+.new-pd {
   text-align: center;
-  .new-product-text {
+  .new-pd-text {
     display: inline-block;
     margin: 0;
     top: -30px;
@@ -113,10 +115,59 @@ h3 {
   }
 }
 
+.new-pd-item {
+
+  .new-pd-content {
+    margin-top: 140px;
+    border: 1px solid $white;
+    box-shadow: 2px 2px 0px $grey;
+    background-color: $white;
+    padding: 15px;
+    min-height: 350px;
+    img {
+      margin-top: -140px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    h4 {
+      font-family: $claire-font;
+      color: $purple;
+      font-size: 22px;
+      text-align: center;
+    }
+  }
+  .more-details {
+    text-align: center;
+    margin-top: -20px;
+    button {
+      border: 0;
+      background-color: $green;
+      color: $page-color;
+      font-family: $thai-font;
+      font-size: 25px;
+      margin: 0;
+      padding: 0 10px;
+      border-bottom: 3px solid $dark-green;
+
+      &:hover{
+        background-color: #1EAC92;
+      }
+    }
+  }
+}
+
 .yellow-star {
   background-image: url('../images/yellow_star.png');
   width: 80px;
   height: 87px;
   display: inline-block;
+}
+
+@media (min-width: 992px){
+  .new-pd-item {
+    .new-pd-content {
+      min-height: 300px;
+    }
+  }
 }
 
