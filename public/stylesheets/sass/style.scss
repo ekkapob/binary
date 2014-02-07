@@ -12,7 +12,15 @@ $green: #19bd9b;
 $dark-green: #188e78;
 $purple: #8C73F1;
 $white: #FDFDFD;
-$pink: #F17398;
+
+$product-pink: #F17398;
+$product-pink-shadow: #D76889;
+$product-green: #58BF8A;
+$product-green-shadow: #51AA7A;
+$product-blue: #41A9F0;
+$product-blue-shadow: #3E9BDE;
+$product-orange: #FBA649;
+$product-orange-shadow: #E69845;
 
 body {
   background-color: $page-color;
@@ -23,6 +31,22 @@ body {
 #logo {
   font-family: $grand-font;
   font-size: 65px;
+}
+
+button {
+  outline: 0;
+  border: 0;
+  background-color: $green;
+  color: $page-color;
+  font-family: $grand-font, $thai-font;
+  font-size: 25px;
+  margin: 0;
+  padding: 0 10px;
+  border-bottom: 3px solid $dark-green;
+
+  &:hover{
+    background-color: #1EAC92;
+  }
 }
 
 nav{
@@ -141,20 +165,6 @@ h3 {
   .more-details {
     text-align: center;
     margin-top: -20px;
-    button {
-      border: 0;
-      background-color: $green;
-      color: $page-color;
-      font-family: $thai-font;
-      font-size: 25px;
-      margin: 0;
-      padding: 0 10px;
-      border-bottom: 3px solid $dark-green;
-
-      &:hover{
-        background-color: #1EAC92;
-      }
-    }
   }
 }
 
@@ -166,17 +176,18 @@ h3 {
 }
 
 .products {
+  margin-top: 15px;
+  margin-bottom: 15px;
   h4 {
     font-family: $thai-font, $claire-font;
     font-size: 32px;
     margin: 0;
   }
   .description {
-    //background-color: #F17398;
     padding: 8px;
     font-size: 16px;
     color: $white;
-    
+    position: relative;
     p {
       margin-bottom: 30px;
     }
@@ -186,26 +197,49 @@ h3 {
       border: none;
       font-size: 30px;
       position: absolute;
-      left: 75%;
-      bottom: 0%;
-      color: $white;
+      bottom: 0;
+      right: 7px;
+      color: $black;
 
       &:hover {
-        color: $black;
+        color: $white;
+      }
+
+      .readmore {
+        font-size: 20px;
+        margin-right: 5px;
       }
     }
   }
 }
 
-.pink {
-  background-color: $pink;
+.shadow {
+  border-style: solid;
+  border-width: 0 0 50px 75px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
 
-/*@media (min-width: 992px){
-  .new-pd-item {
-    .new-pd-content {
-      min-height: 300px;
-    }
+@mixin color-shadow($color, $shadow){
+  background-color: $color;
+  .shadow {
+    border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) $shadow rgba(0, 0, 0, 0);
   }
 }
-*/
+
+.pink { @include color-shadow($product-pink, $product-pink-shadow); }
+.green { @include color-shadow($product-green, $product-green-shadow); }
+.blue { @include color-shadow($product-blue, $product-blue-shadow); }
+.orange { @include color-shadow($product-orange, $product-orange-shadow); }
+
+
+footer {
+  background-color: $black;
+  margin-top: 20px;
+  h3 {
+    font-family: $grand-font;
+    color: $white;
+    text-align: right;
+  }
+}

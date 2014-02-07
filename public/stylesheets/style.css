@@ -28,6 +28,19 @@ body {
   font-family: 'grand_hotelregular';
   font-size: 65px; }
 
+button {
+  outline: 0;
+  border: 0;
+  background-color: #19bd9b;
+  color: #F8F8F8;
+  font-family: 'grand_hotelregular', 'thaisansneue';
+  font-size: 25px;
+  margin: 0;
+  padding: 0 10px;
+  border-bottom: 3px solid #188e78; }
+  button:hover {
+    background-color: #1EAC92; }
+
 nav .nav {
   position: absolute;
   text-align: center;
@@ -121,17 +134,6 @@ h3 {
   .new-pd-item .more-details {
     text-align: center;
     margin-top: -20px; }
-    .new-pd-item .more-details button {
-      border: 0;
-      background-color: #19bd9b;
-      color: #F8F8F8;
-      font-family: 'thaisansneue';
-      font-size: 25px;
-      margin: 0;
-      padding: 0 10px;
-      border-bottom: 3px solid #188e78; }
-      .new-pd-item .more-details button:hover {
-        background-color: #1EAC92; }
 
 .yellow-star {
   background-image: url('../images/yellow_star.png');
@@ -139,35 +141,65 @@ h3 {
   height: 87px;
   display: inline-block; }
 
-.products h4 {
-  font-family: 'thaisansneue', 'claire_handregular';
-  font-size: 32px;
-  margin: 0; }
-.products .description {
-  padding: 8px;
-  font-size: 16px;
-  color: #FDFDFD; }
-  .products .description p {
-    margin-bottom: 30px; }
-  .products .description button {
-    background: none;
-    border: none;
-    font-size: 30px;
-    position: absolute;
-    left: 75%;
-    bottom: 0%;
-    color: #FDFDFD; }
-    .products .description button:hover {
+.products {
+  margin-top: 15px;
+  margin-bottom: 15px; }
+  .products h4 {
+    font-family: 'thaisansneue', 'claire_handregular';
+    font-size: 32px;
+    margin: 0; }
+  .products .description {
+    padding: 8px;
+    font-size: 16px;
+    color: #FDFDFD;
+    position: relative; }
+    .products .description p {
+      margin-bottom: 30px; }
+    .products .description button {
+      background: none;
+      border: none;
+      font-size: 30px;
+      position: absolute;
+      bottom: 0;
+      right: 7px;
       color: #333333; }
+      .products .description button:hover {
+        color: #FDFDFD; }
+      .products .description button .readmore {
+        font-size: 20px;
+        margin-right: 5px; }
+
+.shadow {
+  border-style: solid;
+  border-width: 0 0 50px 75px;
+  position: absolute;
+  right: 0;
+  bottom: 0; }
 
 .pink {
   background-color: #F17398; }
+  .pink .shadow {
+    border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #D76889 rgba(0, 0, 0, 0); }
 
-/*@media (min-width: 992px){
-  .new-pd-item {
-    .new-pd-content {
-      min-height: 300px;
-    }
-  }
-}
-*/
+.green {
+  background-color: #58BF8A; }
+  .green .shadow {
+    border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #51AA7A rgba(0, 0, 0, 0); }
+
+.blue {
+  background-color: #41A9F0; }
+  .blue .shadow {
+    border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #3E9BDE rgba(0, 0, 0, 0); }
+
+.orange {
+  background-color: #FBA649; }
+  .orange .shadow {
+    border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #E69845 rgba(0, 0, 0, 0); }
+
+footer {
+  background-color: #333333;
+  margin-top: 20px; }
+  footer h3 {
+    font-family: 'grand_hotelregular';
+    color: #FDFDFD;
+    text-align: right; }
