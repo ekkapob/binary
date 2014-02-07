@@ -12,6 +12,7 @@ $green: #19bd9b;
 $dark-green: #188e78;
 $purple: #8C73F1;
 $white: #FDFDFD;
+$pink: #F17398;
 
 body {
   background-color: $page-color;
@@ -102,6 +103,7 @@ h3 {
   text-align: center;
   font-family: $thai-font;
   font-size: 48px;
+  margin-top: 10px;
 }
 
 .new-pd {
@@ -116,14 +118,14 @@ h3 {
 }
 
 .new-pd-item {
+  margin-bottom: 25px;
 
   .new-pd-content {
     margin-top: 140px;
     border: 1px solid $white;
     box-shadow: 2px 2px 0px $grey;
     background-color: $white;
-    padding: 15px;
-    min-height: 350px;
+    padding: 15px 15px 20px 15px;
     img {
       margin-top: -140px;
       margin-left: auto;
@@ -163,11 +165,47 @@ h3 {
   display: inline-block;
 }
 
-@media (min-width: 992px){
+.products {
+  h4 {
+    font-family: $thai-font, $claire-font;
+    font-size: 32px;
+    margin: 0;
+  }
+  .description {
+    //background-color: #F17398;
+    padding: 8px;
+    font-size: 16px;
+    color: $white;
+    
+    p {
+      margin-bottom: 30px;
+    }
+    
+    button {
+      background: none;
+      border: none;
+      font-size: 30px;
+      position: absolute;
+      left: 75%;
+      bottom: 0%;
+      color: $white;
+
+      &:hover {
+        color: $black;
+      }
+    }
+  }
+}
+
+.pink {
+  background-color: $pink;
+}
+
+/*@media (min-width: 992px){
   .new-pd-item {
     .new-pd-content {
       min-height: 300px;
     }
   }
 }
-
+*/

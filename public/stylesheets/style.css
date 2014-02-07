@@ -89,7 +89,8 @@ nav .bottom-border {
 h3 {
   text-align: center;
   font-family: 'thaisansneue';
-  font-size: 48px; }
+  font-size: 48px;
+  margin-top: 10px; }
 
 .new-pd {
   text-align: center; }
@@ -100,36 +101,37 @@ h3 {
     position: relative;
     margin-left: 10px; }
 
-.new-pd-item .new-pd-content {
-  margin-top: 140px;
-  border: 1px solid #FDFDFD;
-  box-shadow: 2px 2px 0px #EEE;
-  background-color: #FDFDFD;
-  padding: 15px;
-  min-height: 350px; }
-  .new-pd-item .new-pd-content img {
-    margin-top: -140px;
-    margin-left: auto;
-    margin-right: auto; }
-  .new-pd-item .new-pd-content h4 {
-    font-family: 'claire_handregular';
-    color: #8C73F1;
-    font-size: 22px;
-    text-align: center; }
-.new-pd-item .more-details {
-  text-align: center;
-  margin-top: -20px; }
-  .new-pd-item .more-details button {
-    border: 0;
-    background-color: #19bd9b;
-    color: #F8F8F8;
-    font-family: 'thaisansneue';
-    font-size: 25px;
-    margin: 0;
-    padding: 0 10px;
-    border-bottom: 3px solid #188e78; }
-    .new-pd-item .more-details button:hover {
-      background-color: #1EAC92; }
+.new-pd-item {
+  margin-bottom: 25px; }
+  .new-pd-item .new-pd-content {
+    margin-top: 140px;
+    border: 1px solid #FDFDFD;
+    box-shadow: 2px 2px 0px #EEE;
+    background-color: #FDFDFD;
+    padding: 15px 15px 20px 15px; }
+    .new-pd-item .new-pd-content img {
+      margin-top: -140px;
+      margin-left: auto;
+      margin-right: auto; }
+    .new-pd-item .new-pd-content h4 {
+      font-family: 'claire_handregular';
+      color: #8C73F1;
+      font-size: 22px;
+      text-align: center; }
+  .new-pd-item .more-details {
+    text-align: center;
+    margin-top: -20px; }
+    .new-pd-item .more-details button {
+      border: 0;
+      background-color: #19bd9b;
+      color: #F8F8F8;
+      font-family: 'thaisansneue';
+      font-size: 25px;
+      margin: 0;
+      padding: 0 10px;
+      border-bottom: 3px solid #188e78; }
+      .new-pd-item .more-details button:hover {
+        background-color: #1EAC92; }
 
 .yellow-star {
   background-image: url('../images/yellow_star.png');
@@ -137,6 +139,35 @@ h3 {
   height: 87px;
   display: inline-block; }
 
-@media (min-width: 992px) {
-  .new-pd-item .new-pd-content {
-    min-height: 300px; } }
+.products h4 {
+  font-family: 'thaisansneue', 'claire_handregular';
+  font-size: 32px;
+  margin: 0; }
+.products .description {
+  padding: 8px;
+  font-size: 16px;
+  color: #FDFDFD; }
+  .products .description p {
+    margin-bottom: 30px; }
+  .products .description button {
+    background: none;
+    border: none;
+    font-size: 30px;
+    position: absolute;
+    left: 75%;
+    bottom: 0%;
+    color: #FDFDFD; }
+    .products .description button:hover {
+      color: #333333; }
+
+.pink {
+  background-color: #F17398; }
+
+/*@media (min-width: 992px){
+  .new-pd-item {
+    .new-pd-content {
+      min-height: 300px;
+    }
+  }
+}
+*/
