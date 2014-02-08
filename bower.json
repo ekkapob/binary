@@ -2,6 +2,7 @@
   "name": "Binary",
   "version": "0.0.1",
   "dependencies": {
-    "bootstrap": "~3.0.3"
+    "bootstrap": "~3.0.3",
+    "font-awesome": "~4.0.3"
   }
 }

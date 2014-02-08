@@ -39,6 +39,7 @@ app.use(app.router);
 app.use('/', express.static(path.join(__dirname, 'public')));
 // app.use('/stylesheets', express.static(path.join(__dirname, 'public/stylesheets')));
 app.use('/bootstrap', express.static(path.join(__dirname, 'bower_components/bootstrap')));
+app.use('/font-awesome', express.static(path.join(__dirname, 'bower_components/font-awesome')));
 
 app.set('images', path.join(__dirname, 'public/upload/images'));
 
