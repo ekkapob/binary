@@ -148,6 +148,8 @@ h3 {
     font-family: 'thaisansneue', 'claire_handregular';
     font-size: 32px;
     margin: 0; }
+  .products .product {
+    cursor: pointer; }
   .products .description {
     padding: 8px;
     font-size: 16px;
@@ -155,6 +157,9 @@ h3 {
     position: relative; }
     .products .description p {
       margin-bottom: 30px; }
+    .products .description span.glyphicon {
+      top: 6px;
+      right: -6px; }
     .products .description button {
       background: none;
       border: none;
@@ -167,7 +172,7 @@ h3 {
         color: #FDFDFD; }
       .products .description button .readmore {
         font-size: 20px;
-        margin-right: 5px; }
+        margin-right: 0; }
 
 .shadow {
   border-style: solid;
@@ -180,21 +185,29 @@ h3 {
   background-color: #F17398; }
   .pink .shadow {
     border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #D76889 rgba(0, 0, 0, 0); }
+  .pink:hover {
+    box-shadow: 0px 0px 10px #D76889; }
 
 .green {
   background-color: #58BF8A; }
   .green .shadow {
     border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #51AA7A rgba(0, 0, 0, 0); }
+  .green:hover {
+    box-shadow: 0px 0px 10px #51AA7A; }
 
 .blue {
   background-color: #41A9F0; }
   .blue .shadow {
     border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #3E9BDE rgba(0, 0, 0, 0); }
+  .blue:hover {
+    box-shadow: 0px 0px 10px #3E9BDE; }
 
 .orange {
   background-color: #FBA649; }
   .orange .shadow {
     border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #E69845 rgba(0, 0, 0, 0); }
+  .orange:hover {
+    box-shadow: 0px 0px 10px #E69845; }
 
 footer {
   background-color: #333333;
@@ -202,4 +215,5 @@ footer {
   footer h3 {
     font-family: 'grand_hotelregular';
     color: #FDFDFD;
-    text-align: right; }
+    text-align: right;
+    font-size: 33px; }
