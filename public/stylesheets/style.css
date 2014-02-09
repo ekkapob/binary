@@ -33,6 +33,9 @@ body {
 #logo {
   font-family: 'grand_hotelregular';
   font-size: 65px; }
+  #logo a {
+    text-decoration: none;
+    color: inherit; }
 
 button {
   outline: 0;
