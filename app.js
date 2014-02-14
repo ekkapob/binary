@@ -48,6 +48,9 @@ if ('development' == app.get('env')) {
 	app.use(express.errorHandler());
 }
 
+app.get('/*', function(req, res, next){
+	console.log(req.headers.host);
+});
 app.get('/', routes.index);
 app.get('/login', login.page);
 app.post('/login', login.authenticate);
