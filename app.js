@@ -19,9 +19,9 @@ app.set('views', path.join(__dirname, 'views'));
 //app.set('layout', 'layouts/default');
 app.set('layout', 'layouts/home');
 app.set('partials', {
-	header: 'shared/header',
-	flash: 'shared/flash',
-	footer: 'shared/footer'
+	header: 'shared/_header',
+	flash: 'shared/_flash',
+	footer: 'shared/_footer'
 });
 app.set('view engine', 'html');
 app.engine('html', require('hogan-express'));
