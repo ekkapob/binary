@@ -17,14 +17,16 @@ var login = require('./routes/login');
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
 //app.set('layout', 'layouts/default');
-app.set('layout', 'layouts/home');
-app.set('partials', {
-	header: 'shared/_header',
-	flash: 'shared/_flash',
-	footer: 'shared/_footer'
-});
-app.set('view engine', 'html');
-app.engine('html', require('hogan-express'));
+
+// app.set('layout', 'layouts/home');
+// app.set('partials', {
+// 	header: 'shared/_header',
+// 	flash: 'shared/_flash',
+// 	footer: 'shared/_footer'
+// });
+
+app.set('view engine', 'jade');
+//app.engine('html', require('hogan-express'));
 
 app.use(express.favicon());
 app.use(express.logger('dev'));
@@ -48,7 +50,11 @@ if ('development' == app.get('env')) {
 	app.use(express.errorHandler());
 }
 
-app.get('/', routes.index);
+//app.get('/', routes.index);
+
+app.get('/', function(req,res){
+	res.render('index');
+});
 app.get('/login', login.page);
 app.post('/login', login.authenticate);
 
