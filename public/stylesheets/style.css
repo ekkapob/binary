@@ -155,7 +155,8 @@ h3 {
     font-size: 32px;
     margin: 0; }
   .products .product {
-    cursor: pointer; }
+    cursor: pointer;
+    margin-bottom: 10px; }
   .products .description {
     padding: 8px;
     font-size: 16px;

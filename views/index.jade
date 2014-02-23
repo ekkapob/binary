@@ -13,101 +13,46 @@ block content
           h2 Dress alike one. BinaryOutfits, a family outfiter.
 
       if arrivals
-        include products/_arrivals
+        .row
+          .col-md-12.new-pd
+              span.yellow-star
+              h3.new-pd-text สินค้าใหม่
+            .row.new-pd-item
+              each item in arrivals
+                +arrival(item)
 
-      .row
-        .col-md-12.hr.text-center
-          span.glyphicon.glyphicon-chevron-down.separator
-      .row
-        .col-md-12
-          h3 สินค้าแนะนำ
-      .row.products
-        .col-md-3
-          h4 ชุดกระโปรงดำ
-          .product.pink
-            img.img-responsive(src='../images/products/1.jpg', alt='')
-            .description
-              p
-                | ชุดน้ำเงินเข้าเซ็ทสวมใส่สบาย เหมาะสำหรับวันหยุดพักผ่อน ไปเดินเล่นในสวนสาธาระณะแบบเรียบง่าย
-              .shadow
-              button
-                span.readmore รายละเอียด
-                i.fa.fa-chevron-circle-right
-        .col-md-3
-          h4 ชุดกระโปรงดำ
-          .product.green
-            img.img-responsive(src='../images/products/1.jpg', alt='')
-            .description
-              p
-                | ชุดน้ำเงินเข้าเซ็ทสวมใส่สบาย เหมาะสำหรับวันหยุดพักผ่อน ไปเดินเล่นในสวนสาธาระณะแบบเรียบง่าย
-              .shadow
-              button
-                span.readmore รายละเอียด
-                i.fa.fa-chevron-circle-right
-        .col-md-3
-          h4 ชุดกระโปรงดำ
-          .product.blue
-            img.img-responsive(src='../images/products/1.jpg', alt='')
-            .description
-              p
-                | ชุดน้ำเงินเข้าเซ็ทสวมใส่สบาย เหมาะสำหรับวันหยุดพักผ่อน ไปเดินเล่นในสวนสาธาระณะแบบเรียบง่าย
-              .shadow
-              button
-                span.readmore รายละเอียด
-                i.fa.fa-chevron-circle-right
-        .col-md-3
-          h4 ชุดกระโปรงดำ
-          .product.orange
-            img.img-responsive(src='../images/products/1.jpg', alt='')
-            .description
-              p
-                | ชุดน้ำเงินเข้าเซ็ทสวมใส่สบาย เหมาะสำหรับวันหยุดพักผ่อน ไปเดินเล่นในสวนสาธาระณะแบบเรียบง่าย
-              .shadow
-              button
-                span.readmore รายละเอียด
-                i.fa.fa-chevron-circle-right
-      .row.products
-        .col-md-3
-          h4 ชุดกระโปรงดำ
-          .product.blue
-            img.img-responsive(src='../images/products/1.jpg', alt='')
-            .description
-              p
-                | ชุดน้ำเงินเข้าเซ็ทสวมใส่สบาย เหมาะสำหรับวันหยุดพักผ่อน ไปเดินเล่นในสวนสาธาระณะแบบเรียบง่าย
-              .shadow
-              button
-                span.readmore รายละเอียด
-                i.fa.fa-chevron-circle-right
-        .col-md-3
-          h4 ชุดกระโปรงดำ
-          .product.orange
-            img.img-responsive(src='../images/products/1.jpg', alt='')
-            .description
-              p
-                | ชุดน้ำเงินเข้าเซ็ทสวมใส่สบาย เหมาะสำหรับวันหยุดพักผ่อน ไปเดินเล่นในสวนสาธาระณะแบบเรียบง่าย
-              .shadow
-              button
-                span.readmore รายละเอียด
-                i.fa.fa-chevron-circle-right
-        .col-md-3
-          h4 ชุดกระโปรงดำ
-          .product.pink
-            img.img-responsive(src='../images/products/1.jpg', alt='')
-            .description
-              p
-                | ชุดน้ำเงินเข้าเซ็ทสวมใส่สบาย เหมาะสำหรับวันหยุดพักผ่อน ไปเดินเล่นในสวนสาธาระณะแบบเรียบง่าย
-              .shadow
-              button
-                span.readmore รายละเอียด
-                i.fa.fa-chevron-circle-right
-        .col-md-3
-          h4 ชุดกระโปรงดำ
-          .product.green
-            img.img-responsive(src='../images/products/1.jpg', alt='')
-            .description
-              p
-                | ชุดน้ำเงินเข้าเซ็ทสวมใส่สบาย เหมาะสำหรับวันหยุดพักผ่อน ไปเดินเล่นในสวนสาธาระณะแบบเรียบง่าย
-              .shadow
-              button
-                span.readmore รายละเอียด
-                i.fa.fa-chevron-circle-right
+      if products
+        .row
+          .col-md-12.hr.text-center
+            span.glyphicon.glyphicon-chevron-down.separator
+        .row
+          .col-md-12
+            h3 สินค้าแนะนำ
+        .row.products
+          - products.splice(8)
+          - var colors = ['pink', 'green', 'blue', 'orange', 'blue', 'orange', 'pink', 'green']
+          - for (var i = 0; i < products.length; i++)
+            - var color = i
+            +product(products[i], colors[i])
+
+mixin arrival(item)
+  .col-md-4
+    .new-pd-content
+      img(src='#{item.img}', alt='#{item.name}').img-circle.img-responsive
+      h4 #{item.name}
+      .icons
+      p #{item.description}
+    .more-details
+      button รายละเอียด
+
+mixin product(product, color)
+  .col-md-3.product
+    h4 #{product.name}
+    div(class='product #{color}')
+      img.img-responsive(src='#{product.img}', alt='#{product.name}')
+      .description
+        p #{product.description}
+        .shadow
+        button
+          span.readmore รายละเอียด
+          i.fa.fa-chevron-circle-right
