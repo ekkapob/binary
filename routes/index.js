@@ -22,17 +22,18 @@ exports.index = function(req, res) {
     });
   }
 
-  res.locals = {
-    arrivals: arrivals,
-    flash: {
-      message: req.flash('info'),
-      warning: req.flash('warning')
-    }
-  };
+  // res.locals = {
+  //   arrivals: arrivals,
+  //   flash: {
+  //     message: req.flash('info'),
+  //     warning: req.flash('warning')
+  //   }
+  // };
+  // res.locals = {
+  //   // arrivals: arrivals
+  // };
 
   res.render('index', {
-    partials: {
-      arrivals: 'shared/_arrivals'
-    }
+    arrivals: arrivals
   });
 };

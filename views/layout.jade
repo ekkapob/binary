@@ -9,14 +9,6 @@ html
     title Binary Outfits #{title}
   body
     include _header
-    
-    if flash
-      .container
-        .row
-          if flash.message          
-            .col-md-12.alert.alert-success #{flash.message}
-          if flash.warning
-            .col-md-12.alert.alert-warning #{flash.warning}
-
+    include _flash
     block content
     include _footer
