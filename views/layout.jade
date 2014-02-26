@@ -6,10 +6,15 @@ html
     link(rel='stylesheet', href='bootstrap/dist/css/bootstrap.css')
     link(rel='stylesheet', href='font-awesome/css/font-awesome.min.css')
     link(rel='stylesheet', href='stylesheets/style.css')
-    title Binary Outfits #{title}
+    - var defaultTitle = 'Binary Outfits'
+    if title
+        title #{defaultTitle} | #{title}
+    else
+        title #{defaultTitle}
   body
     a(name='top')
-    include _header
+    unless hideMenu
+        include _header
     include _flash
     block content
     .container

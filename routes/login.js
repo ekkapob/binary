@@ -1,5 +1,5 @@
 exports.page = function(req, res) {
-	res.render('login', {
+	res.render('admin/login', {
 		title: 'Login'
 	});
 }
