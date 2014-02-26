@@ -148,7 +148,6 @@ h3 {
   display: inline-block; }
 
 .products {
-  margin-top: 15px;
   margin-bottom: 15px; }
   .products h4 {
     font-family: 'thaisansneue', 'claire_handregular';
@@ -156,7 +155,8 @@ h3 {
     margin: 0; }
   .products .product {
     cursor: pointer;
-    margin-bottom: 10px; }
+    margin-bottom: 10px;
+    margin-top: 5px; }
   .products .description {
     padding: 8px;
     font-size: 16px;

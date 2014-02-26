@@ -8,7 +8,15 @@ html
     link(rel='stylesheet', href='stylesheets/style.css')
     title Binary Outfits #{title}
   body
+    a(name='top')
     include _header
     include _flash
     block content
+    .container
+        .row
+            .col-md-12.text-center
+                a(href='#top')
+                    i.fa.fa-angle-up
+                    span &nbsp;กลับขึ้นด้านบน&nbsp;
+                    i.fa.fa-angle-up
     include _footer
