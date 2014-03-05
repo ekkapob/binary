@@ -1,5 +1,5 @@
 doctype html
-html 
+html
   head
     meta(charset='UTF-8')
     meta(name='viewport', content='width=device-width, initial-scale=1')
@@ -13,8 +13,7 @@ html
         title #{defaultTitle}
   body
     a(name='top')
-    unless hideMenu
-        include _header
+    include _header
     include _flash
     block content
     .container

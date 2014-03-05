@@ -3,23 +3,24 @@
     header
       #logo.col-md-12.text-center
         a(href='/') BinaryOutfits
-      .col-md-12
-        nav
-          .col-md-12.top-border
-          .col-md-12.bottom-border
-          .col-md-12
-            ul.nav
-              li
-                a(href='') สินค้าใหม่
-              li
-                a(href='') ชุดครอบครัว
-              li
-                a(href='') ชุดคุณหนู
-              li
-                a(href='') ชุดคุณแม่
-              li
-                a(href='') ชุดคุณพ่อ
-              li
-                a(href='') การสั่งซื้อสินค้า
-              li
-                a(href='') ติดต่อสอบถาม
+      unless hideNav
+        .col-md-12
+          nav
+            .col-md-12.top-border
+            .col-md-12.bottom-border
+            .col-md-12
+              ul.nav
+                li
+                  a(href='') สินค้าใหม่
+                li
+                  a(href='') ชุดครอบครัว
+                li
+                  a(href='') ชุดคุณหนู
+                li
+                  a(href='') ชุดคุณแม่
+                li
+                  a(href='') ชุดคุณพ่อ
+                li
+                  a(href='') การสั่งซื้อสินค้า
+                li
+                  a(href='') ติดต่อสอบถาม

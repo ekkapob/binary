@@ -1,6 +1,7 @@
 exports.page = function(req, res) {
 	res.render('admin/login', {
-		title: 'Login'
+		title: 'Login',
+    hideNav: true
 	});
 }
 
