@@ -62,9 +62,6 @@ exports.index = function(req, res) {
   //     warning: req.flash('warning')
   //   }
   // };
-  // res.locals = {
-  //   // arrivals: arrivals
-  // };
 
   res.render('index', {
     arrivals: arrivals,

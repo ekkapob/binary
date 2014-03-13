@@ -50,6 +50,9 @@ button {
   button:hover {
     background-color: #1EAC92; }
 
+.login-form button {
+  font-size: 30px; }
+
 nav .nav {
   text-align: center;
   display: table;

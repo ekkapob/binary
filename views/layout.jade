@@ -8,19 +8,20 @@ html
     link(rel='stylesheet', href='stylesheets/style.css')
     - var defaultTitle = 'Binary Outfits'
     if title
-        title #{defaultTitle} | #{title}
+      title #{defaultTitle} | #{title}
     else
-        title #{defaultTitle}
+      title #{defaultTitle}
   body
     a(name='top')
     include _header
     include _flash
     block content
-    .container
+    unless hideNav
+      .container
         .row
-            .col-md-12.text-center
-                a(href='#top')
-                    i.fa.fa-angle-up
-                    span &nbsp;กลับขึ้นด้านบน&nbsp;
-                    i.fa.fa-angle-up
+          .col-md-12.text-center
+            a(href='#top')
+              i.fa.fa-angle-up
+              span &nbsp;กลับขึ้นด้านบน&nbsp;
+              i.fa.fa-angle-up
     include _footer
