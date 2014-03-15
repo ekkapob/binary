@@ -7,7 +7,7 @@ var app = express();
 var routes = require('./routes');
 var user = require('./routes/user');
 var product = require('./routes/product');
-var login = require('./routes/login');
+var admin = require('./routes/admin');
 
 // all environments
 app.set('port', process.env.PORT || 3000);
@@ -43,7 +43,7 @@ app.set('images', path.join(__dirname, 'public/upload/images'));
 
 // development only
 if ('development' == app.get('env')) {
-	app.use(express.errorHandler());
+  app.use(express.errorHandler());
 }
 
 app.get('/', routes.index);
@@ -51,8 +51,10 @@ app.get('/', routes.index);
 // app.get('/', function(req,res){
 // 	res.render('index');
 // });
-app.get('/login', login.page);
-app.post('/login', login.authenticate);
+app.get('/login', admin.loginPage);
+app.post('/login', admin.authenticate);
+app.all('/admin/*', admin.checkPriviledge);
+app.get('/admin/index', admin.index);
 
 //REST routes
 app.get('/products', product.index);
@@ -66,5 +68,5 @@ app.post('/products', product.create(app.get('images')));
 app.get('/users', user.list);
 
 http.createServer(app).listen(app.get('port'), function() {
-	console.log('Express server listening on port ' + app.get('port'));
+  console.log('Express server listening on port ' + app.get('port'));
 });

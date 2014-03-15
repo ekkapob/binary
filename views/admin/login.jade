@@ -1,13 +1,12 @@
 extends ../layout
 block content
-  div TEST
   .container
     .row
       form.form-horizontal.container.login-form(action='/login', method='post')
         .form-group
-          label.col-sm-3.control-label Email
+          label.col-sm-3.control-label Username
           .col-sm-7
-            input.form-control(name='email', type='email', placeholder='Email', autofocus)
+            input.form-control(name='email', type='text', placeholder='Username', autofocus)
         .form-group
           label.col-sm-3.control-label Password
           .col-sm-7
