@@ -20,6 +20,9 @@
     "grunt-sass": "~0.10.0",
     "grunt-contrib-watch": "~0.5.3"
   },
+  "scripts": {
+    "start": "node app.js"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/ekkapob/binary.git"
